@@ -4,6 +4,7 @@ import re
 import requests
 
 AOC_URL = "https://adventofcode.com"
+INT_PATTERN = r"-?\d+"
 
 
 def get_input(year: int, day: int) -> str:
