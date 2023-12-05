@@ -84,7 +84,7 @@ def update_card_counts(card_count: dict[int, int], card_score: CardScore) -> Non
 
 def level_two(input: Sequence[str]):
     card_counts: dict[int, int] = {}
-    card_scores = [score_line_by_count(*format_line(s)) for s in input]
+    card_scores = (score_line_by_count(*format_line(s)) for s in input)
     for card_score in card_scores:
         update_card_counts(card_counts, card_score)
     total_cards = sum(card_counts.values())
